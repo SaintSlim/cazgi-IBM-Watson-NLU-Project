@@ -2,6 +2,7 @@ import React from 'react';
 import './bootstrap.min.css';
 
 class EmotionTable extends React.Component {
+    emotionArray = Object.entries(this.props.emotions);
     render() {
       //Returns the emotions as an HTML table
       return (  
@@ -12,7 +13,7 @@ class EmotionTable extends React.Component {
               /*Write code to use the .map method that you worked on in the 
               Hands-on React lab to extract the emotions. If you are stuck,
               please click the instructions to see how to implement a map*/
-              Object.entries(this.props.emotions).map((value) => 
+              this.emotionArray.map((value) => 
               <tr>
                   <td>{value[0]}</td>
                   <td>{value[1]}</td>
